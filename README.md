@@ -1,5 +1,6 @@
 # Two Way Sign Language Translate
 Desktop App to Translate Sign Language from Voice to Sign and Vice Versa
+NO Account /Signup needed.
 
 #### How to use:
 1. Install the above Libraries
