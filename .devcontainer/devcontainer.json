@@ -6,6 +6,6 @@
         "version": "3.11.9"
       }
     },
-    "postCreateCommand": "pip install -r requirements.txt"
+    "postCreateCommand": "sudo apt-get update -y && sudo apt-get install -y python3-pyaudio portaudio19-dev libgl1-mesa-glx  libportaudio2 libportaudio-dev && pip install -r requirements.txt"
   }
   
