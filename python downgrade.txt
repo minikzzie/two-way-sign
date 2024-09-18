@@ -1,0 +1,63 @@
+To downgrade Python from 3.12 to 3.11.9 on GitHub Codespaces, follow these steps:
+
+Step-by-Step Guide:
+1. Check the Current Python Version
+First, confirm the current Python version:
+
+bash
+Copy code
+python --version
+2. Install Python 3.11.9 in Codespaces
+In GitHub Codespaces, you may not have the exact version of Python you need pre-installed. Here's how to install Python 3.11.9 manually:
+
+Install pyenv (Python Version Manager): pyenv is a handy tool for managing multiple Python versions.
+
+Install pyenv in your Codespace:
+
+bash
+Copy code
+curl https://pyenv.run | bash
+Configure pyenv: After installing pyenv, configure it in your shell environment by adding the following to your ~/.bashrc (or ~/.zshrc if you're using Zsh):
+
+bash
+Copy code
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+Then reload your shell configuration:
+
+bash
+Copy code
+source ~/.bashrc  # or source ~/.zshrc
+Install Python 3.11.9: Now, use pyenv to install Python 3.11.9:
+
+bash
+Copy code
+pyenv install 3.11.9
+Set Python 3.11.9 as the Global Python Version: Set Python 3.11.9 as the global version for your Codespace:
+
+bash
+Copy code
+pyenv global 3.11.9
+Confirm the Python version after this:
+
+bash
+Copy code
+python --version
+3. Create Virtual Environment with Python 3.11.9
+Now that Python 3.11.9 is installed, create and activate a virtual environment as usual:
+
+bash
+Copy code
+python -m venv myenv
+source myenv/bin/activate
+You are now using Python 3.11.9 in your GitHub Codespaces environment.
+
+4. Install Required Packages
+Install any necessary packages like TensorFlow using pip inside the virtual environment:
+
+bash
+Copy code
+pip install -r requirements.txt  # or manually install packages
+This will ensure you are using Python 3.11.9 with all required libraries in your project.

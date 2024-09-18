@@ -1,0 +1,7 @@
+{
+
+       "image": "mcr.microsoft.com/vscode/devcontainers/python:3.11.9-bullseye",
+
+       "runArgs": ["--init"]
+
+     }
